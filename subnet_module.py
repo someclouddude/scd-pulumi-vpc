@@ -65,12 +65,16 @@ def create_subnet_groups(
             subnet_cidr = subnet_cidrs[i]
             subnet_name = f"{name}-{i+1}"
             
+            # Ensure we're using the right AZ for this subnet
+            az_index = i % len(expanded_azs)
+            subnet_az = expanded_azs[az_index]
+            
             # Create subnet
             subnet = aws.ec2.Subnet(
                 resource_name=subnet_name,
                 vpc_id=vpc_id,
                 cidr_block=subnet_cidr,
-                availability_zone=expanded_azs[i],
+                availability_zone=subnet_az,
                 map_public_ip_on_launch=(routing_profile == "public"),
                 tags={
                     "Name": subnet_name
