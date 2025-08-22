@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /Users/ian.evans/projects2/pulumi/vpc/venv
+set -gx VIRTUAL_ENV /Users/ian.evans/git/scd-pulumi-vpc/venv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
