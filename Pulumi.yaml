@@ -1,1 +1,11 @@
-# ...existing code from your project...
+name: vpc
+description: Build a vpc in pulumi
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python

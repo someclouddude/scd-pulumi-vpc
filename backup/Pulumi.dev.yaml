@@ -1,0 +1,19 @@
+encryptionsalt: v1:4qv/XT4PdjM=:v1:Y9TLegkc+XWIoLTC:kMFuo1vKbPjRVJaOU3sAF/Sagc3dCg==
+config:
+  aws:region: us-east-1
+  vpc:vpcName: dev-vpc
+  vpc:vpcCidr: 10.0.0.0/16
+  vpc:publicSubnetCount: 3
+  vpc:publicSubnetCidrs:
+    - 10.0.1.0/24
+    - 10.0.2.0/24
+    - 10.0.3.0/24
+  vpc:publicSubnetNames:
+    - dev-public-subnet-1
+    - dev-public-subnet-2
+    - dev-public-subnet-3
+  vpc:isolatedSubnetCount: 3
+  vpc:isolatedSubnetCidrs:
+    - 10.0.101.0/24
+    - 10.0.102.0/24
+    - 10.0.103.0/24

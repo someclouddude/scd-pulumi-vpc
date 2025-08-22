@@ -1,1 +1,29 @@
-# ...existing code from your project...
+config:
+  aws:region: us-east-1
+  vpc:vpcName: stg-vpc
+  vpc:vpcCidr: 10.20.0.0/16
+  vpc:natGatewayCount: 1  # Number of NAT gateways to create
+  vpc:subnetGroups:
+    - subnetName: stg-public
+      subnetCount: 3
+      routingProfile: public
+      availabilityZones: ["a", "b", "c"]  # Optional: use specific AZs
+      subnetCidrs:
+        - 10.20.1.0/24
+        - 10.20.2.0/24
+        - 10.20.3.0/24
+    - subnetName: stg-private
+      subnetCount: 3
+      routingProfile: private
+      subnetCidrs:
+        - 10.20.11.0/24
+        - 10.20.12.0/24
+        - 10.20.13.0/24
+    - subnetName: stg-isolated
+      subnetCount: 3
+      routingProfile: isolated
+      subnetCidrs:
+        - 10.20.21.0/24
+        - 10.20.22.0/24
+        - 10.20.23.0/24
+encryptionsalt: v1:HmaEuBmG1zQ=:v1:kbcWnrCEW0QpmoMi:avHgZ0V9MtZEeIBLsikKSHAXO+yPfA==
