@@ -1,0 +1,5 @@
+encryptionsalt: v1:4qv/XT4PdjM=:v1:Y9TLegkc+XWIoLTC:kMFuo1vKbPjRVJaOU3sAF/Sagc3dCg==
+config:
+  aws:region: us-east-1
+  vpc:vpcName: prd-vpc
+  vpc:vpcCidr: 10.10.0.0/16
